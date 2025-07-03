@@ -1,26 +1,38 @@
 # Dispersive traits of marine fishes' early life stages 
 
-PURPOSE, PROBABILITY DENSITY FUNCTIONS AND CITATION PART TO ADD
+To support research on the early life stages of marine fishes, we compiled a comprehensive database of 35 traits (7 qualitative and 28 quantitative) describing developmental, behavioral, and ecological aspects of the pelagic phase. We focused on traits most relevant to pelagic dispersal processes and the parameterization of biophysical dispersal models. The database includes 314 records on age and size at settlement (including 207 unpublished entries), in situ measurements of swimming performance from the Atlantic and Indian Oceans, and 907 unpublished records on vertical positioning. Considered together, dispersive traits datasets comprise 47,193 records across 6,908 marine fish species, representing 1,935 genera, 365 families, and 59 orders, sourced from 3,530 references.
 
-A total of 7 categorical variables and 28 numerical variables constitute the core of our dispersive traits database, which is segmented into 17 different databases, each dedicated to a specific trait or data type. We adopted a standardized way to provide all statistical descriptors of numeric variables in separate columns identified by specific suffixes in their names: mean (`_MEAN`), minimum (`_MIN`), maximum (`_MAX`), variability (`_CONF`), mean type (`_MEAN_TYPE`), range type (`_RANGE_TYPE`) and variability type (`_CONF_TYPE`). These columns are complemented by 57 metadata types relevant for interpreting each dispersive trait (e.g., origin, temperature, sample size, variable type, definitions). The number of metadata fields varies between databases, ranging from 2 (rafting) to 17 (settlement size), with an average of 8. Missing data also varies widely across databases (mean percentage of NA ranging from 5.5% to 83.3%, average 50.2%).
+Please cite both the original reference and our data paper, which describes in further detail this new database and method, if you use any part of our database: REFERENCE TO BE ADDED
+---
+
+
+
+## Robust Probability Density Function estimation from descriptive statistics
+
+To address the inherent variability in dispersive traits of marine fishes, we developed a method to estimate Probability Density Functions (PDFs) from species-level summary statistics reported in the literature. This approach relies on the Tukey’s g-and-h distribution to flexibly model skewness and kurtosis, which are commonly observed in early life-history traits. We created the `estimate_probability_density` function to rapidly fit these PDFs solely using the sample size (`N` columns), mean (`_MEAN` suffix), standard deviation (`_CONF` suffix), and value range (`_MIN` & `_MAX` suffixes). Then, the function `predict_from_probability_density` generates the required number of values by randomly sampling them from PDFs generated, while `graph_probability_density` allows for easy visualization (see below). The R script `example_tukey_pdf_fit` provides examples on how to use these functions in different contexts, while also providing advice on how to deal with missing standard deviations (often the case). This tool should help with the integration of realistic trait variability into biophysical models, even when only descriptive statistics are available.
+
+![Example Tukey PDF 10 samples 1000 bootstrap](https://github.com/user-attachments/assets/f5fde3dc-3522-4cea-b8f3-452ca0977c2b)
+
+<u>Legend:</u> Representation of all Tukey’s g-and-h PDFs for all combinations of g (-1 to 1 by 0.1) and h (0 and 2 by 0.1), that were summarized using quantiles. The number of bootstrap iterations was set to 1,000 (I), while the other descriptive statistics used as input are indicating in the title. Both 95% confidence intervals are represented using solid black lines, while 85% confidence intervals are shown with dashed black lines, and the median is indicated with a red line. Sampling probability is indicated by the color gradient (red = high, blue = low), influencing the shape of the green curve representing the distribution of 10,000 randomly sampled values.
+---
 
 
 
 ## General columns
-Description of columns systematically present in all databases, providing the taxonomy and references for each record, along with easy access to the source using the URL/DOI. The valid name (and associated taxonomic information) can be used as the backbone for linking records across all other databases, but this should not be done using the original name that might vary among references for a single species.
+Description of columns systematically present in all databases, providing the taxonomy and references for each record, along with easy access to the source using the URL/DOI. The valid name (and associated taxonomic information) can be used as the backbone for linking records across all other databases, but this should not be done using the original name that might vary among references for a single species. The percentage of missing values was computed by grouping all databases together. Genus or family-level information in the vertical position and rafting datasets explains why the `GENUS` or `VALID_NAME` columns sometimes contain `NA`. Similarly, the few missing values in the `LINK` column correspond to new or unpublished datasets, along with private references.
 
 | Variable      | Type      |   Missing values (%) | Description                                                                                        |
 |:--------------|:----------|---------:|:---------------------------------------------------------------------------------------------------|
 | ORDER         | character |        0 | Valid order according to WoRMS (2025)                                                              |
 | FAMILY        | character |        0 | Valid family according to WoRMS (2025)                                                             |
-| GENUS         | character |        0 | Valid genus according to WoRMS (2025)                                                              |
-| VALID_NAME    | character |        0 | Valid species according to WoRMS (2025)                                                            |
+| GENUS         | character |        2.6% | Valid genus according to WoRMS (2025)                                                              |
+| VALID_NAME    | character |        4.4% | Valid species according to WoRMS (2025)                                                            |
 | APHIA_ID      | character |        0 | WoRMS aphia ID of the valid species name (2025)                                                    |
 | AUTHORITY     | character |        0 | Authority (description study) of the valid species from WoRMS                                      |
 | ORIGINAL_NAME | character |        0 | Original species name in the source study                                                          |
-| EXT_REF       | character |      NA | Source study of the information cited in the main reference (given as 'AUTHORS, DATE')             |
-| REFERENCE     | character |      NA | Main reference from which the information has been retrieved (given as 'AUTHORS (DATE) - JOURNAL') |
-| LINK          | character |      NA | URL or DOI to access easily the main reference                                                     |
+| EXT_REF       | character |      78.8% | Source study of the information cited in the main reference (given as 'AUTHORS, DATE')             |
+| REFERENCE     | character |      0 | Main reference from which the information has been retrieved (given as 'AUTHORS (DATE) - JOURNAL') |
+| LINK          | character |      2.4% | URL or DOI to access easily the main reference                                                     |
 
 ---
 
