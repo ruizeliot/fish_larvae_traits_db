@@ -66,6 +66,13 @@ graph_sp1_n5 = graph_probability_density(sp1_n5_pdf, predicted_data = predicted_
 
 ## Species 1 with n = 10
 
+sp1_n10_boot = 1000
+sp1_n10_n = 10
+sp1_n10_mean = 43.5
+sp1_n10_sd = 2
+sp1_n10_min = 35
+sp1_n10_max = 52
+
 sp1_n10_pdf = estimate_probability_density(n_samp = sp1_n10_n, mean_samp = sp1_n10_mean, 
                                            sd_samp = sp1_n10_sd, min_samp = sp1_n10_min, 
                                            max_samp = sp1_n10_max, n_boot = sp1_n10_boot)
