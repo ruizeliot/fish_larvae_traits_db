@@ -1,6 +1,6 @@
 # Dispersive traits of marine fishes' early life stages 
 
-PURPOSE AND CITATION PART TO ADD
+PURPOSE, PROBABILITY DENSITY FUNCTIONS AND CITATION PART TO ADD
 
 A total of 7 categorical variables and 28 numerical variables constitute the core of our dispersive traits database, which is segmented into 17 different databases, each dedicated to a specific trait or data type. We adopted a standardized way to provide all statistical descriptors of numeric variables in separate columns identified by specific suffixes in their names: mean (`_MEAN`), minimum (`_MIN`), maximum (`_MAX`), variability (`_CONF`), mean type (`_MEAN_TYPE`), range type (`_RANGE_TYPE`) and variability type (`_CONF_TYPE`). These columns are complemented by 57 metadata types relevant for interpreting each dispersive trait (e.g., origin, temperature, sample size, variable type, definitions). The number of metadata fields varies between databases, ranging from 2 (rafting) to 17 (settlement size), with an average of 8. Missing data also varies widely across databases (mean percentage of NA ranging from 5.5% to 83.3%, average 50.2%).
 
