@@ -27,14 +27,14 @@ Description of columns systematically present in all databases, providing the ta
 |:--------------|:----------|---------:|:---------------------------------------------------------------------------------------------------|
 | ORDER         | character |        0 | Valid order according to WoRMS (2025)                                                              |
 | FAMILY        | character |        0 | Valid family according to WoRMS (2025)                                                             |
-| GENUS         | character |        2.6% | Valid genus according to WoRMS (2025)                                                              |
-| VALID_NAME    | character |        4.4% | Valid species according to WoRMS (2025)                                                            |
+| GENUS         | character |        2.6 | Valid genus according to WoRMS (2025)                                                              |
+| VALID_NAME    | character |        4.4 | Valid species according to WoRMS (2025)                                                            |
 | APHIA_ID      | character |        0 | WoRMS aphia ID of the valid species name (2025)                                                    |
 | AUTHORITY     | character |        0 | Authority (description study) of the valid species from WoRMS                                      |
 | ORIGINAL_NAME | character |        0 | Original species name in the source study                                                          |
-| EXT_REF       | character |      78.8% | Source study of the information cited in the main reference (given as 'AUTHORS, DATE')             |
+| EXT_REF       | character |      78.8 | Source study of the information cited in the main reference (given as 'AUTHORS, DATE')             |
 | REFERENCE     | character |      0 | Main reference from which the information has been retrieved (given as 'AUTHORS (DATE) - JOURNAL') |
-| LINK          | character |      2.4% | URL or DOI to access easily the main reference                                                     |
+| LINK          | character |      2.4 | URL or DOI to access easily the main reference                                                     |
 
 ---
 
