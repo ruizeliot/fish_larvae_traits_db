@@ -14,7 +14,7 @@ To address the inherent variability in dispersive traits of marine fishes, we de
 
 ![Example Tukey PDF 10 samples 1000 bootstrap](https://github.com/user-attachments/assets/f5fde3dc-3522-4cea-b8f3-452ca0977c2b)
 
-<u>Legend:</u> Representation of all Tukey’s g-and-h PDFs for all combinations of g (-1 to 1 by 0.1) and h (0 and 2 by 0.1), that were summarized using quantiles. The number of bootstrap iterations was set to 1,000 (I), while the other descriptive statistics used as input are indicating in the title. Both 95% confidence intervals are represented using solid black lines, while 85% confidence intervals are shown with dashed black lines, and the median is indicated with a red line. Sampling probability is indicated by the color gradient (red = high, blue = low), influencing the shape of the green curve representing the distribution of 10,000 randomly sampled values.
+**Legend:** Representation of all Tukey’s g-and-h PDFs for all combinations of g (-1 to 1 by 0.1) and h (0 and 2 by 0.1), that were summarized using quantiles. The number of bootstrap iterations was set to 1,000 (I), while the other descriptive statistics used as input are indicated in the title. Both 95% confidence intervals are represented using solid black lines, while 85% confidence intervals are shown with dashed black lines, and the median is indicated with a red line. Sampling probability is indicated by the color gradient (red = high, blue = low), influencing the shape of the green curve representing the distribution of 10,000 randomly sampled values.
 
 ---
 
