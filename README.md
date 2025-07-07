@@ -2,7 +2,7 @@
 
 To support research on the early life stages of marine fishes, we compiled a comprehensive database of 35 traits (7 qualitative and 28 quantitative) describing developmental, behavioral, and ecological aspects of the pelagic phase. We focused on traits most relevant to pelagic dispersal processes and the parameterization of biophysical dispersal models. The database includes 521 records on age and size at settlement (including 207 unpublished entries), in situ measurements of swimming performance from the Atlantic and Indian Oceans, and 907 unpublished records on vertical position in the water column. Considered together, dispersal traits datasets comprise 47,213 records across 6,909 marine fish species, representing 1,936 genera, 365 families, and 59 orders, sourced from 3,531 references.
 
-Do not hesitate to signal errors or provide missing data/references in the current version of the database in the Issues section or by sending an email to eliotruiz3@gmail.com.
+Do not hesitate to signal errors or provide missing data/references in the Issues section or by sending an email to eliotruiz3@gmail.com.
 
 Please cite both the original reference and our data paper, which describes in further detail this new database and method, if you use any part of our database: REFERENCE TO BE ADDED
 
