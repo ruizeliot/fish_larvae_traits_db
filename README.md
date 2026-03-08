@@ -69,8 +69,8 @@ This species-level database documents egg characteristics, including position in
 
 | Variable                  | Type       | Missing values (%) | Summary                                                                 | Description                                                                 |
 |---------------------------|------------|------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| EGG_LOCATION              | categorical| 14.4       | Categories: Benthic; Benthic (mouth/pouch); Benthic (nest spawners); etc. | Description of the position of eggs in the water column with general details given between parenthesis |
-| EGG_DETAILS               | categorical| 91.6       | Categories: Attached (suspended) eggs; Attached and sinking eggs; etc.   | Additional description of the position of eggs in the water column with more details |
+| EGG_LOCATION              | categorical| 14.4       | Categories: Benthic; Benthic (mouth/pouch); Benthic (nest spawners); etc. | Description of the position of embryos in the water column with general details on the reproductive mode and egg location for oviparous species given between parentheses |
+| EGG_DETAILS               | categorical| 91.6       | Categories: Attached (suspended) eggs; Attached and sinking eggs; etc.   | Additional details of the position of eggsin the water column for oviparous species |
 | EGG_SHAPE                 | categorical| 58.6       | Categories: not-spherical; spherical                                    | Shape of the egg determining if columns starting by EGG_L and columns starting by EGG_W are equal (spherical) or not (not-spherical) |
 | EGG_L_MEAN                | numeric    | 64.1       | Mean: 1.46, Range: 0.15 - 20.50                                        | Mean length (or diameter if spherical) of the egg (in mm)                  |
 | EGG_L_MIN                 | numeric    | 79.7       | Mean: 1.28, Range: 0.00 - 15.00                                        | Minimum length (or diameter if spherical) of the egg (in mm)               |
