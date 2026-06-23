@@ -1,22 +1,10 @@
-# Pelagic dispersal traits databases for early-life stages of marine fishes from curated literature compilation
+# Global pelagic dispersal traits datasets for early-life stages of marine fishes
 
-To support research on the early life stages of marine fishes, we compiled a comprehensive database of 35 traits (7 qualitative and 28 quantitative) describing developmental, behavioral, and ecological aspects of the pelagic phase. We focused on traits most relevant to pelagic dispersal processes and the parameterization of biophysical dispersal models. The database includes 471 new records on age and size at settlement, including 207 previously unpublished entries and 264 newly acquired during two fieldworks in the Atlantic and Indian Oceans. These fieldworks also allowed obtaining 41 new measurements of swimming performance in situ (see: https://doi.org/10.1111/2041-210X.70011). Behavioral databases were completed by 907 previously unpublished records of larval fish vertical position in the water column. Considered together, dispersal traits datasets comprise 47,132 records across 6,874 marine fish species, representing 1,932 genera, 358 families, and 58 orders, sourced from 3,201 references.
+To support research on the early life stages of marine fishes, we compiled a comprehensive database of 35 traits (7 qualitative and 28 quantitative) describing developmental, behavioral, and ecological aspects of the pelagic phase. We focused on traits most relevant to pelagic dispersal processes and the parameterization of biophysical dispersal models. The database includes 309 new records acquired during two fieldworks in the Atlantic and Indian Oceans, and 248 previously unpublished records of settlement age/size. During these fieldworks, we newly described pelagic juvenile stages, measured settlement age and settlement size, while also measuring navigation and swimming speed in situ (see: https://doi.org/10.1111/2041-210X.70011). Behavioral databases were completed by 907 previously unpublished records of larval fish vertical position in the water column. Considered together, dispersal traits datasets comprise 45,310 records across 6,841 marine fish species, representing 1,906 genera, 342 families, and 53 orders, sourced from 3,201 references.
 
 Do not hesitate to signal errors or provide missing data/references in the Issues section or by sending an email to eliotruiz3@gmail.com.
 
 Please cite both the original reference and our data paper, which describes in further detail this new database and method, if you use any part of our database: REFERENCE TO BE ADDED
-
----
-
-
-
-## Robust Probability Density Function estimation from descriptive statistics
-
-To address the inherent variability in dispersal traits of marine fishes, we developed a method to estimate Probability Density Functions (PDFs) from species-level summary statistics reported in the literature. This approach relies on the Tukey’s g-and-h distribution to flexibly model skewness and kurtosis, which are commonly observed in early life-history traits. We created the `estimate_probability_density` function to rapidly fit these PDFs solely using the sample size (`N` columns), mean (`_MEAN` column name suffix), standard deviation (`_CONF` suffix), and value range (`_MIN` & `_MAX` suffixes). Then, the function `predict_from_probability_density` generates the required number of values by randomly sampling them from PDFs generated, while `graph_probability_density` allows for easy visualization (see below). The R script `example_tukey_pdf_fit` provides examples on how to use these functions in different contexts, while also providing advice on how to deal with missing standard deviations (often the case). This tool should help with the integration of realistic trait variability into biophysical models, even when only descriptive statistics are available.
-
-![Example Tukey PDF 10 samples 1000 bootstrap](https://github.com/user-attachments/assets/f5fde3dc-3522-4cea-b8f3-452ca0977c2b)
-
-**Legend:** Representation of all Tukey’s g-and-h PDFs for all combinations of g (-1 to 1 by 0.1) and h (0 and 2 by 0.1), that were summarized using quantiles. The number of bootstrap iterations was set to 1,000 (I), while the other descriptive statistics used as input are indicated in the title. Both 95% confidence intervals are represented using solid black lines, while 85% confidence intervals are shown with dashed black lines, and the median is indicated with a red line. Sampling probability is indicated by the color gradient (red = high, blue = low), influencing the shape of the green curve representing the distribution of 10,000 randomly sampled values.
 
 ---
 
