@@ -4,7 +4,7 @@ To support research on the early life stages of marine fishes, we compiled a com
 
 Do not hesitate to signal errors or provide missing data/references in the Issues section or by sending an email to eliotruiz3@gmail.com.
 
-Please cite both the original reference and our data paper, which describes in further detail this new database and method, if you use any part of our database: REFERENCE TO BE ADDED
+Please cite both the original reference and our data paper, which describes in further detail this new database and method, if you use any part of our database: Ruiz, E., Thémèze-Leroy, M., Ferraton, F. et al. Global pelagic dispersal traits datasets for early-life stages of marine fishes. Sci Data 13, 1291 (2026). https://doi.org/10.1038/s41597-026-07768-1
 
 ---
 
